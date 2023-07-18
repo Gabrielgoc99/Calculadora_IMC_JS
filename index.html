@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var nome = prompt('Por favor, digite seu nome: ')
+        var altura = prompt('Agora, digite sua altura medida em centímetros: ')
+        var peso = prompt('Agora, digite seu peso, separando quilos e gramas por um ponto: ')
+
+        altura = parseFloat(altura/100)
+        peso = parseFloat(peso)
+
+        var massa = peso / (altura * altura)
+        var classificacao = '0'
+        
+
+        if (massa < 16) {
+            classificacao = 'Baixo Peso Muito Grave'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 16 && massa <= 16.99) {
+            classificacao = 'Baixo Peso Grave'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 17 && massa < 18.49) {
+            classificacao = 'Baixo Peso'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 18,50 && massa <= 24.99) {
+            classificacao = 'Peso Normal'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 25 && massa <= 29.99) {
+            var classificacao = 'Sobrepeso'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 30 && massa <= 34.99) {
+            var classificacao = 'Obesidade Grau I'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+        else if (massa >= 35 && massa <= 39.99) {
+            classificacao = 'Obesidade Grau II'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ' sendo classificado como: ' + classificacao + '.')
+        } else {
+            classificacao = 'Obesidade Grau III'
+            alert(nome + ' possui índice de massa corporal igual a ' + massa.toFixed(2) + 
+            ', sendo classificado como: ' + classificacao + '.')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
